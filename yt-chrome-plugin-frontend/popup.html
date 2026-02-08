@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Comment Insights</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 15px;
+      background-color: #1e1e1e;
+      color: #f1f1f1;
+      margin: 0;
+      width: 420px;
+      min-height: 300px;
+    }
+    h1 {
+      font-size: 22px;
+      color: #ffffff;
+      margin: 0 0 20px 0;
+      text-align: center;
+    }
+    .section {
+      margin-bottom: 20px;
+      background: #2d2d2d;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .section-title {
+      font-weight: bold;
+      color: #64B5F6;
+      margin: 0 0 15px 0;
+      font-size: 16px;
+    }
+    .chart-container {
+      display: flex;
+      justify-content: center;
+      margin: 15px 0;
+    }
+    canvas {
+      max-width: 100%;
+    }
+    .legend {
+      margin-top: 15px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+      font-size: 14px;
+    }
+    .legend-color {
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      margin-right: 10px;
+      display: inline-block;
+    }
+    .comment-list {
+      list-style: none;
+      padding: 0;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .comment-item {
+      margin: 10px 0;
+      padding: 12px;
+      background-color: #383838;
+      border-radius: 6px;
+      border-left: 3px solid #64B5F6;
+    }
+    .comment-text {
+      color: #e0e0e0;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .comment-sentiment {
+      font-weight: bold;
+      font-size: 13px;
+      display: inline-block;
+    }
+    .metrics-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .metric {
+      background-color: #383838;
+      padding: 15px;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .metric-title {
+      font-size: 11px;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .metric-value {
+      font-size: 26px;
+      font-weight: bold;
+      color: #64B5F6;
+    }
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: #999;
+      font-size: 16px;
+    }
+    .error {
+      color: #ff5252;
+      background-color: #3d1e1e;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 10px 0;
+      border-left: 3px solid #ff5252;
+    }
+    .status {
+      color: #999;
+      font-size: 14px;
+      padding: 10px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎬 YouTube Sentiment Analyzer</h1>
+  <div id="output" class="section">
+    <div class="loading">⏳ Loading...</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
